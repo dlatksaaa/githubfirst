@@ -7,10 +7,11 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:background="#000000">
-<LinearLayout
+<FrameLayout
+    android:id="@+id/chartFrame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_weight="1">
+    android:layout_weight="2">
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart"
@@ -18,12 +19,110 @@
         android:layout_height="match_parent"
         android:background="#000000"/>
 
-</LinearLayout>
+</FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="3"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="집중:"
+                android:fontFamily="@font/notosanscjkkr_bold"
+                android:includeFontPadding="false"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="  --  "
+                android:fontFamily="@font/notosanscjkkr_bold"
+                android:includeFontPadding="false"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="명상:"
+                android:fontFamily="@font/notosanscjkkr_bold"
+                android:includeFontPadding="false"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="  --  "
+                android:fontFamily="@font/notosanscjkkr_bold"
+                android:includeFontPadding="false"
+                android:textColor="#ffffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="심박:"
+                android:fontFamily="@font/notosanscjkkr_bold"
+                android:includeFontPadding="false"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="  --  "
+                android:fontFamily="@font/notosanscjkkr_bold"
+                android:includeFontPadding="false"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="right"
+           android:orientation="horizontal"
+           android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/musicPropile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="선택된 노래가 없습니다."
+            android:textSize="15dp"
+            android:fontFamily="@font/notosanscjkkr_bold"
+            android:includeFontPadding="false"
+            >
+
+        </TextView>
+
+        <Button
+        android:id="@+id/music_play"
+        android:background="@drawable/playbutton_24"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="5dp"
+        />
+
+        <Button
+            android:id="@+id/music_stop"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/pause"
+            android:shadowColor="#000000"/>
+        <Button
+            android:id="@+id/music_choise"
+            android:layout_width="35dp"
+            android:layout_height="38dp"
+            android:background="@drawable/list2"
+            android:textColor="#000000" />
+       </LinearLayout>
+
 
     </LinearLayout>
 
